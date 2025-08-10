@@ -1,0 +1,10 @@
+
+.wrap{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.canvas{ width:100%; height:100%; display:block; }
+
+.wrap{ transition: opacity .18s linear; }

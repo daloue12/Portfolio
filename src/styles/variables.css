@@ -1,0 +1,12 @@
+:root{
+  --bg: #0e0f13;
+  --bg-alt: #12141b;
+  --text: #e7e9ee;
+  --muted: #b1b5c3;
+  --brand: #6ee7ff;
+  --brand-2: #8b5cf6;
+  --card: #161922;
+  --outline: #2a2f3a;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+}

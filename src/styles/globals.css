@@ -1,0 +1,21 @@
+@import url('./variables.css');
+@import url('./reset.css');
+
+html, body, #root { height: 100%; }
+body{
+  color:var(--text);
+  background: radial-gradient(1200px 800px at 80% -10%, #1b1f2a, transparent 55%), var(--bg);
+  font: 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans";
+}
+
+.container{ width:min(1100px, 92%); margin-inline:auto; }
+.section{ padding: 70px 0; }
+.sectionAlt{ background: var(--bg-alt); }
+.sectionTitle{ font-size: clamp(22px, 2.5vw + 6px, 32px); margin:0 0 20px; }
+.btn{
+  display:inline-block; text-decoration:none; padding: 10px 16px; border-radius: 12px;
+  border:1px solid var(--outline); color:var(--text);
+  transform: translateZ(0);
+}
+.btnPrimary{ background: linear-gradient(90deg, var(--brand), var(--brand-2)); border:0; }
+.btnGhost{ background: transparent; }

@@ -1,0 +1,48 @@
+
+.controls{ display:flex; justify-content:center; gap:8px; margin-bottom: 10px; }
+.stage{
+  perspective: 1200px;
+  height: 420px;
+  position: relative;
+  overflow: visible;
+}
+.ring{
+  will-change: transform;
+
+  position:absolute; top: 50%; left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, -380px);
+  transition: transform .75s ease;
+}
+.card{
+  will-change: transform, opacity;
+
+  position:absolute; top:50%; left:50%;
+  width: 420px; max-width: 90vw;
+  transform-style: preserve-3d;
+  background: var(--card); border:1px solid var(--outline); border-radius: var(--radius); box-shadow: var(--shadow);
+  display:grid; grid-template-rows: 170px auto;
+  translate: -50% -50%;
+  opacity: .7;
+  transition: opacity .3s ease, filter .3s ease, box-shadow .3s ease;
+  cursor: pointer;
+}
+.card:hover{ filter: brightness(1.05); }
+.card.active{ opacity:1; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+
+.media{ position:relative; overflow:hidden; border-radius: 12px; margin: 10px; background: #0d0f15; border:1px dashed var(--outline); }
+.mediaInner{
+  position:absolute; inset:-20% -20% -20% -20%;
+  background: conic-gradient(from 120deg, rgba(110,231,255,.15), transparent 35%), radial-gradient(400px 200px at 30% 30%, rgba(139,92,246,.2), transparent 60%);
+  filter: blur(8px) saturate(110%);
+  animation: drift 40s linear infinite;
+}
+@keyframes drift{ 100%{ transform: rotate(360deg) } }
+
+.body{ padding: 0 12px 14px; }
+.actions{ margin-top:10px; display:flex; gap:8px; }
+
+@media (prefers-reduced-motion: reduce){
+  .ring{ transition: none !important; }
+  .mediaInner{ animation: none !important; }
+}

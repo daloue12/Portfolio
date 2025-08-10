@@ -1,0 +1,30 @@
+.timeline{
+  position:relative;
+  margin-top: 10px;
+  display:grid;
+  gap: 26px;
+}
+.line{
+  position:absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--brand), var(--brand-2));
+  transform: scaleY(0);
+}
+.entry{ position: relative; display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: flex-start; }
+.dot{
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid var(--outline);
+  background: var(--bg);
+  position: relative; left: 8px; top: 6px;
+  cursor: pointer;
+}
+.entry.active .dot{ background: linear-gradient(90deg, var(--brand), var(--brand-2)); border-color: transparent; }
+.card{
+  background: var(--card); border:1px solid var(--outline); border-radius: var(--radius); padding: 14px; box-shadow: var(--shadow);
+  transition: transform .2s ease, border-color .2s ease;
+  transform-style: preserve-3d;
+}
+.card:hover{ transform: translateY(-3px) rotateX(.6deg) rotateY(.6deg); border-color: color-mix(in oklab, var(--brand) 50%, var(--outline)); }
+.header{ display:grid; gap: 4px; }
+.time{ color: var(--muted); font-size: 12px; }
+.title{ margin:0; }
+.meta{ color: var(--muted); margin:0; }
+.body{ margin-top: 8px; color: var(--text); }
