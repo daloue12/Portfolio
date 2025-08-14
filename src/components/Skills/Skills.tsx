@@ -14,7 +14,7 @@ const DATA = [
   ['API Development', 80],
   ['Database Management', 80],
   ['DevOps', 68],
-  ['Leadership Development', 95]
+  ['Leadership Development', 96]
 ] as const
 
 export default function Skills(){
